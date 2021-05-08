@@ -1,13 +1,16 @@
 const mongoose = require("mongoose");
+const keys = require('../key')
 
 // mongoose.connect("mongodb://localhost:27017/dataset", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // });
 
-module.exports = {
-  mongoURI: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_APIKEY}@cluster0.dottv.mongodb.net/${process.env.DB_COLLECTION}?retryWrites=true&w=majority`,
-};
+mongoose.connect(keys.mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 
 var dbConn = mongoose.connection;
 dbConn.on("connected", function () {
