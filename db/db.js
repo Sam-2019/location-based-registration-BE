@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // });
 
 module.exports = {
-  mongoURI: `mongodb+srv://${process.env.DB_USER}:${process.envDB_APIKEY}@cluster0.dottv.mongodb.net/${process.envDB_COLLECTION}?retryWrites=true&w=majority`,
+  mongoURI: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_APIKEY}@cluster0.dottv.mongodb.net/${process.env.DB_COLLECTION}?retryWrites=true&w=majority`,
 };
 
 var dbConn = mongoose.connection;
