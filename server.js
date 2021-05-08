@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/", function (req, res) {
-  res.end("Learn GraphQL daily");
+  res.end("Server up and running");
 });
 
 app.use(
